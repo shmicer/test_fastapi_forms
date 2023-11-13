@@ -1,0 +1,122 @@
+[{
+  "_id": {
+    "$oid": "6551fad03cb8d0f8bfba4fe3"
+  },
+  "name": "My email form",
+  "my_email": "email"
+},
+{
+  "_id": {
+    "$oid": "6551fad03cb8d0f8bfba4fe4"
+  },
+  "name": "User phone form",
+  "phone_number": "phone"
+},
+{
+  "_id": {
+    "$oid": "6551fad03cb8d0f8bfba4fe5"
+  },
+  "name": "Sample date form",
+  "sample_date": "date"
+},
+{
+  "_id": {
+    "$oid": "6551fad03cb8d0f8bfba4fe6"
+  },
+  "name": "My text form",
+  "output_text": "text"
+},
+{
+  "_id": {
+    "$oid": "6551fad03cb8d0f8bfba4fe7"
+  },
+  "name": "User profile",
+  "user_email": "email",
+  "user_phone": "phone"
+},
+{
+  "_id": {
+    "$oid": "6551fad03cb8d0f8bfba4fe8"
+  },
+  "name": "Email form",
+  "email": "email",
+  "estimated_date": "date"
+},
+{
+  "_id": {
+    "$oid": "6551fad03cb8d0f8bfba4fe9"
+  },
+  "name": "Email letter form",
+  "email": "email",
+  "letter_text": "text"
+},
+{
+  "_id": {
+    "$oid": "6551fad03cb8d0f8bfba4fea"
+  },
+  "name": "Subscription form",
+  "user_phone": "phone",
+  "date": "date"
+},
+{
+  "_id": {
+    "$oid": "6551fad03cb8d0f8bfba4feb"
+  },
+  "name": "SMS text form",
+  "phone_number": "phone",
+  "text": "text"
+},
+{
+  "_id": {
+    "$oid": "6551fad03cb8d0f8bfba4fec"
+  },
+  "name": "Birthday form",
+  "birthday_date": "date",
+  "congratulation": "text"
+},
+{
+  "_id": {
+    "$oid": "6551fad03cb8d0f8bfba4fed"
+  },
+  "name": "Order form",
+  "customer_email": "email",
+  "customer_phone": "phone",
+  "order_date": "date"
+},
+{
+  "_id": {
+    "$oid": "6551fad03cb8d0f8bfba4fee"
+  },
+  "name": "Subscription form",
+  "email": "email",
+  "user_phone": "phone",
+  "text_field": "text"
+},
+{
+  "_id": {
+    "$oid": "6551fad03cb8d0f8bfba4fef"
+  },
+  "name": "Email message form",
+  "email": "email",
+  "date": "date",
+  "message": "text"
+},
+{
+  "_id": {
+    "$oid": "6551fad03cb8d0f8bfba4ff0"
+  },
+  "name": "Phone notification form",
+  "user_phone": "phone",
+  "notification_date": "date",
+  "notification_text": "text"
+},
+{
+  "_id": {
+    "$oid": "6551fad03cb8d0f8bfba4ff1"
+  },
+  "name": "User profile form",
+  "email_field": "email",
+  "phone_field": "phone",
+  "registration_date": "date",
+  "annotation": "text"
+}]
