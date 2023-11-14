@@ -17,7 +17,7 @@ test_data = [
         "name": "SMS text form",
         "data": {
             "phone_number": "+7 900 222 22 22",
-            "sms_text": "text"
+            "text": "text"
         }
     },
     {
