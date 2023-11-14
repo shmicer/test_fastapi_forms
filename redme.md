@@ -47,24 +47,29 @@ f_name1=value1&f_name2=value2
 ```python
 +7 xxx xxx xx xx
 ```
-дата передается в формате:
+дата передается в форматах:
 ```python
-YYYY-MM-DD.
+YYYY-MM-DD
+
+DD.MM.YYYY
 ```
-В качестве базы данных используется Docker с MongoDB.
+
+В качестве базы данных используется Docker образ с MongoDB.
 
 Инструкция по установке:
 
-Скачайте данный репозиторий и выполните команду:
+Скачайте данный репозиторий
+
+```python
+`git clone https://github.com/shmicer/training_system_test_case.git`
+```
+
+и выполните команду:
+
 ```python
 docker-compose up -d --build
 ```
-После сборки контейнеров вы можете загрузить данные в бд. 
-```python
-docker-compose exec web python manage.py loaddata fixtures.json
-```
-В тестовой бд несколько форм и суперюзер: login: admin, password: admin.
-После чего перейдите по адресу: http://127.0.0.1:8000/get_form/
+При сборке контейнера данные шаблонов импортируются в базу данных
 
 Так же в комплекте есть пару тестов, которые вы можете выполнить из контейнера командой
 ```python

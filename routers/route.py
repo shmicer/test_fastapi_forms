@@ -5,11 +5,6 @@ from schema.schemas import validate_type, find_template, list_templates
 router = APIRouter()
 
 
-@router.get('/ping')
-async def ping() -> dict:
-    return {'Success': True}
-
-
 @router.get('/')
 async def mainpage() -> str:
     return 'YOU ARE ON THE MAIN PAGE'
