@@ -1,6 +1,7 @@
-from fastapi import APIRouter, Body, Query, Form
+from fastapi import APIRouter, Body
+
 from config.database import template_collection
-from schema.schemas import validate_type, find_template, list_templates
+from schema.schemas import find_template, list_templates, validate_type
 
 router = APIRouter()
 

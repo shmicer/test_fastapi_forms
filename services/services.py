@@ -15,6 +15,9 @@ def list_templates(templates):
 
 
 def validate_type(value):
+    """
+    Функция для валидации типов данных, полученных при запросе
+    """
     for fmt in ALLOWED_STRING_FORMATS:
         try:
             _ = datetime.strptime(value, fmt)
@@ -30,6 +33,9 @@ def validate_type(value):
 
 
 def find_template(data):
+    """
+    Функция для поиска подходящего шаблона в базне данных
+    """
     records = template_collection.find({})
     for template in records:
         template_fields = set(template.keys()) - {'name'} - {'_id'}

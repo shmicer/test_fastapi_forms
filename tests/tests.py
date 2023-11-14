@@ -66,7 +66,11 @@ def test_get_form_without_matching_template(client):
     }
     response = client.post('/get_form', json=data)
     assert response.status_code == 200
-    assert response.json() == {'customer_email': 'text', 'customer_phone': 'phone', 'order_date': 'text'}
+    assert response.json() == {
+        'customer_email': 'text',
+        'customer_phone': 'phone',
+        'order_date': 'text'
+    }
 
 
 def test_get_form_with_empty_data(client):

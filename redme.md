@@ -71,9 +71,9 @@ docker-compose up -d --build
 ```
 При сборке контейнера данные шаблонов импортируются в базу данных
 
-Так же в комплекте есть пару тестов, которые вы можете выполнить из контейнера командой
+Так же в репозитории присутствуют тесты, которые можно запустить командой
 ```python
-docker-compose exec web python manage.py test
+docker-compose exec app python main.py test
 ```
 
 
