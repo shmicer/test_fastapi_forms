@@ -9,15 +9,15 @@ test_data = [
     {
         "name": "Subscription form",
         "data": {
-            "user_phone": "+ 8 988 000 00 00",
+            "user_phone": "+7 988 000 00 00",
             "date": "01.01.2023"
         }
     },
     {
         "name": "SMS text form",
         "data": {
-            "phone_number": "+ 7 900 222 22 22",
-            "text": "text"
+            "phone_number": "+7 900 222 22 22",
+            "sms_text": "text"
         }
     },
     {
@@ -41,6 +41,14 @@ test_data = [
             "email": "abc@abc.com",
             "user_phone": "+7 911 456 45 45",
             "text_field": "text"
+        }
+    },
+    {
+        "name": "Email message form",
+        "data": {
+            "email": "abc@abc.com",
+            "date": "2021-05-14",
+            "message": "text"
         }
     },
 ]

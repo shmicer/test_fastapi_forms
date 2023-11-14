@@ -6,12 +6,16 @@ from config.database import template_collection
 ALLOWED_STRING_FORMATS = ['%d.%m.%Y', '%Y-%m-%d']
 
 
-def list_templates(templates):
-    res = []
-    for document in templates:
-        document['_id'] = str(document['_id'])
-        res.append(document)
-    return res
+def get_all_templates():
+    try:
+        records = template_collection.find({})
+        return list(records)
+    except Exception as e:
+        print(f"Error accessing the database: {e}")
+        return None
+
+
+all_templates = get_all_templates()
 
 
 def validate_type(value):
@@ -32,19 +36,31 @@ def validate_type(value):
         return 'text'
 
 
-def find_template(data):
+def find_and_validate_template(data):
     """
-    Функция для поиска подходящего шаблона в базне данных
+    Функция для валидации полей данных и поиска подходящего шаблона
     """
-    records = template_collection.find({})
-    for template in records:
-        template_fields = set(template.keys()) - {'name'} - {'_id'}
-        data_fields = set(data.keys())
-        if template_fields.issubset(data_fields):
-            matching = all(
-                data[field] and template[field] == validate_type(data[field])
-                for field in data_fields
-            )
-            if matching:
-                return template['name']
-    return None
+    data_fields = set(data.keys())
+
+    best_matching_template = None
+    best_matching_count = 0
+
+    for template in all_templates:
+        template_fields = set(template.keys()) - {'name', '_id'}
+
+        matching = template_fields.intersection(data_fields)  # template and data keys both contain set
+        matching_count = len(matching)
+
+        # check if data's items have valid types with template values
+        value_matching = all(template[item] == validate_type(data[item]) for item in matching)
+
+        if matching_count > best_matching_count and value_matching:
+            best_matching_template = template['name']
+            best_matching_count = matching_count
+
+    field_types = {field: validate_type(data[field]) for field, v in data.items()}
+
+    if best_matching_template:
+        return best_matching_template
+    else:
+        return field_types
