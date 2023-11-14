@@ -61,7 +61,7 @@ DD.MM.YYYY
 Скачайте данный репозиторий
 
 ```python
-`git clone https://github.com/shmicer/training_system_test_case.git`
+`git clone https://github.com/shmicer/test_fastapi_forms.git`
 ```
 
 и выполните команду:
