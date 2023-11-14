@@ -9,10 +9,10 @@ ALLOWED_STRING_FORMATS = ['%d.%m.%Y', '%Y-%m-%d']
 def get_all_templates():
     try:
         records = template_collection.find({})
-        return list(records)
     except Exception as e:
         print(f"Error accessing the database: {e}")
         return None
+    return list(records)
 
 
 all_templates = get_all_templates()
@@ -48,7 +48,8 @@ def find_and_validate_template(data):
     for template in all_templates:
         template_fields = set(template.keys()) - {'name', '_id'}
 
-        matching = template_fields.intersection(data_fields)  # template and data keys both contain set
+        # template and data keys both contain set
+        matching = template_fields.intersection(data_fields)
         matching_count = len(matching)
 
         # check if data's items have valid types with template values

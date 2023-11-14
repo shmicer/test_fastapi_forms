@@ -10,14 +10,6 @@ async def mainpage() -> str:
     return 'YOU ARE ON THE MAIN PAGE'
 
 
-@router.get('/get_records')
-async def get_records() -> list:
-    records = get_all_templates()
-    return records
-
-
 @router.post('/get_form')
 async def get_form(data: dict = Body(...)):
     return find_and_validate_template(data)
-
-

@@ -67,13 +67,13 @@ DD.MM.YYYY
 и выполните команду:
 
 ```python
-docker-compose up -d --build
+docker-compose -f local.yml up -d --build
 ```
 При сборке контейнера данные шаблонов импортируются в базу данных
 
 Так же в репозитории присутствуют тесты, которые можно запустить командой
 ```python
-docker-compose exec app python main.py test
+docker-compose exec app python main.py pytest
 ```
 
 
