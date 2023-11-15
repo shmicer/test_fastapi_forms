@@ -1,7 +1,6 @@
 version: "3.11"
 services:
 
-
   app:
     container_name: "app"
     image: app
@@ -11,6 +10,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - ./src:/src
     restart: always
     ports:
       - "8000:8000"

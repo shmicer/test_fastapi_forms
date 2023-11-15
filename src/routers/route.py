@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Body
 
-from services.services import find_and_validate_template, get_all_templates
+from services.services import find_and_validate_template
 
 router = APIRouter()
 
